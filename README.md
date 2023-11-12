@@ -15,3 +15,7 @@ To Run
 ```
 docker-compose up -d
 ```
+
+To Listen
+===
+In your browser, open a new tab or window and navigate to http://localhost:8000/stream
