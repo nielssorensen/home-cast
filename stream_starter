@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+start_icecast() {
+    /etc/init.d/icecast2 start
+}
+
+edit_xml() {
+    sed -i "s|PATH_TO_M3U|${PATH_TO_M3U}|g" /etc/icecast2/ezstream.xml
+}
+
+start_ezstream() {
+    ezstream -c /etc/icecast2/ezstream.xml
+}
+
+main() {
+    start_icecast
+
+    edit_xml
+
+    start_ezstream
+}
+
+main

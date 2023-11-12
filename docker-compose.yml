@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  streamer:
+    build:
+      context: .
+    image: nfws/home-cast
+    environment:
+      PATH_TO_M3U: "${PATH_TO_M3U}"
+    ports:
+      - "8000:8000"
+    volumes:
+      - "${MEDIA_PATH}:/media"
