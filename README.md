@@ -8,8 +8,18 @@ https://www.icecast.org/
 Setup
 ===
 ENVIRONMENT VARIABLES TO BE SET ON HOST
-- MEDIA_PATH - where all the media files (like MP3s) are - no default
-- PATH_TO_M3U - the path with m3u filename to load - no default
+| Environment Variable Name | Default Value    | Description |
+| ------------------------  | ---------------- | ----------- |
+| MEDIA_PATH                | no default value | absolute path, with trailing slash, to media files (like MP3s); used by docker-compose, on host, to mount volume |
+| PATH_TO_M3U               | no default value | absolute path with m3u filename; used in container
+ to set Ezstream |
+
+e.g.
+```
+export MEDIA_PATH=/path/to/media/
+export PATH_TO_M3U=/media/playlist.m3u
+```
+
 
 To Run
 ===
