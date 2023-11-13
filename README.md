@@ -11,8 +11,7 @@ ENVIRONMENT VARIABLES TO BE SET ON HOST
 | Environment Variable Name | Default Value    | Description |
 | ------------------------  | ---------------- | ----------- |
 | MEDIA_PATH                | no default value | absolute path, with trailing slash, to media files (like MP3s); used by docker-compose, on host, to mount volume |
-| PATH_TO_M3U               | no default value | absolute path with m3u filename; used in container
- to set Ezstream |
+| PATH_TO_M3U               | no default value | absolute path with m3u filename; used in container to set Ezstream |
 
 e.g.
 ```
